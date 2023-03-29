@@ -1,20 +1,15 @@
 import MainContainer from "./MainContainer";
-import  "./Dashboard.module.css"
+import "./Dashboard.module.css"
 import { Outlet } from 'react-router-dom';
-const Dashboard = ()=>{
+const Dashboard = () => {
 
-    return (
+  return (
     <>
-  <MainContainer/>
-  
+      <MainContainer />
       <main >
-      
-
-      <Outlet/>
-      </main> 
-    
- 
+        <Outlet />
+      </main>
     </>
-    )
+  )
 }
 export default Dashboard;

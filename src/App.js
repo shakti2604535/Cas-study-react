@@ -15,21 +15,22 @@ import SearchBar from './SearchBar';
 
 const router = createBrowserRouter([
 
-  {path:'/',element:<LogIn/>},
-  {path:'/dashboard',element:<Protected Component = {Dashboard}/>,children:[
-    {path:'',element:<Home/> },
-    {path:'contactform',element:<ContactForm/>},
-    {path:'search',element:<SearchBar/>}
-  ]}
+  { path: '/', element: <LogIn /> },
+  {
+    path: '/dashboard', element: <Protected Component={Dashboard} />, children: [
+      { path: '', element: <Home /> },
+      { path: 'contactform', element: <ContactForm /> },
+      { path: 'search', element: <SearchBar /> }
+    ]
+  }
 
 ])
 function App() {
   return (
     <div>
-      
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
-     
+
   );
 
 }

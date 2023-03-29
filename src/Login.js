@@ -57,9 +57,6 @@ const LogIn = () => {
   return (
     <>
       <div className='container squarebox d-flex flex-column justify-content-center align-items-center'>
-
-        {/* <button className='btn btn-primary' onClick={() => login()}>Sign in with Google 
-               </button> */}
         <p className="text-center">My first React App</p>
         <a className="btn btn-outline-primary" onClick={() => login()} role="button" >
           <img width="20px" margin-right="5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
