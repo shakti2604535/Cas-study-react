@@ -1,11 +1,9 @@
 
-import classes from './Login.module.css'
+import './Login.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
-
-
 const LogIn = () => {
 
   const [user, setUser] = useState([]);
@@ -16,7 +14,6 @@ const LogIn = () => {
       onError: (error) => console.log('Login Failed:', error)
     },
   );
-
   useEffect(() => {
     localStorage.clear()
   }, []
@@ -32,14 +29,12 @@ const LogIn = () => {
             }
           })
           .then((res) => {
-            
             localStorage.setItem('name', res.data.name)
             localStorage.setItem('id', res.data.id)
             localStorage.setItem('image', res.data.picture)
             navigate('dashboard')
           })
           .catch(
-          // (err) => console.log(err)
         );
       }
       else {
@@ -57,20 +52,14 @@ const LogIn = () => {
   return (
     <>
       <div className='container squarebox d-flex flex-column justify-content-center align-items-center'>
-
-        {/* <button className='btn btn-primary' onClick={() => login()}>Sign in with Google 
-               </button> */}
         <p className="text-center">My first React App</p>
         <a className="btn btn-outline-primary" onClick={() => login()} role="button" >
           <img width="20px" margin-right="5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
           Login with Google
         </a>
-        {/* )} */}
       </div>
-
     </>
   );
-
 }
 
 export default LogIn

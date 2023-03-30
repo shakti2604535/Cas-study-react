@@ -1,21 +1,18 @@
-form{
-   
-
+form {
     width: 70%;
-  
     height: 100%;
-    /* align-items: center;
-    background-color: aqua; */
 }
-div{
+
+.borderBottom {
+    border-bottom: 5px groove;
+}
+
+div {
     margin-bottom: 1%;
 }
 
-.container{
+.container {
     padding-top: 15%;
     width: 70%;
     height: 100%;
-   /* margin: 0 auto;
-    align-items: center; */
-   
 }

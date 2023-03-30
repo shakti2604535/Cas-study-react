@@ -12,11 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <GoogleOAuthProvider clientId="167627724048-aouppreuqs46bv8lj6ma1gum5rta5bp3.apps.googleusercontent.com">
-  
     <App />
-    
-</GoogleOAuthProvider>
- 
+  </GoogleOAuthProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
